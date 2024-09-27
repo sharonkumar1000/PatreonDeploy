@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container1{
+    width:70
+}
+.invertImg{
+    filter:invert(0.23)
+}
