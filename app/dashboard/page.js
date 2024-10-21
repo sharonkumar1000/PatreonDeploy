@@ -100,36 +100,24 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-<<<<<<< HEAD
     const getData = async () => {
       if (session && session.user) {
         let u = await fetchuser(session.user.name);
         setForm(u);
       }
     };
-=======
      const getData = async () => {
     if (session && session.user) {
       let u = await fetchuser(session.user.name);
       setForm(u);
     }
   };
->>>>>>> fdcacad1586c95916f8eee50dcccf4dc47fb3417
     getData();
     if (!session) {
       router.push("/login");
     }
   }, [session, router]);
 
-<<<<<<< HEAD
-  
-=======
-  // const getData = async () => {
-  //   let u = await fetchuser(session.user.name);
-  //   setForm(u);
-  // };
- 
->>>>>>> fdcacad1586c95916f8eee50dcccf4dc47fb3417
   
 
   const handleChange = (e) => {
