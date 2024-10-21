@@ -153,7 +153,7 @@ theme="light"
 <ToastContainer />
     <div className="min-h-screen flex justify-center items-center bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
-        <h2 className="text-2xl font-bold text-center mb-6">Dashboard</h2>
+        <h2 className="text-2xl font-bold text-center mb-6 text-black">updated Dashboard</h2>
         <form action={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
             <label htmlFor="name" className="mb-1 font-medium text-gray-700">
