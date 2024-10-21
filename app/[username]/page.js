@@ -8,8 +8,8 @@ const Username = async({params}) => {
   // if the username is not present in the database show a 404 page
   const checkUser = async()=>{
 
-    let u = await User.findOne({username:params.username})
     await connectDB()
+    let u = await User.findOne({username:params.username})
     if(!u){
       return notFound()
     }
