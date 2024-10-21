@@ -29,29 +29,20 @@ export default function Home() {
       <h1 className="text-lg font-bold text-center mb-14">Your fans can buy you a chai</h1>
       <div className="flex gap-5 justify-around">
       <div className="item space-y-3 flex flex-col justify-center items-center ">
-<<<<<<< HEAD
           <Image width = {88} height={88} className="bg-slate-400 rounded-full p-2" src="/man.gif" alt="no iamge" />
-=======
           <Image width = {88} className="bg-slate-400 rounded-full p-2" src="/man.gif" alt="" />
->>>>>>> fdcacad1586c95916f8eee50dcccf4dc47fb3417
           <p className="font-bold text-center">Your Fans want to help</p>
           <p className="text-center">Your fans are available to help you</p>
         </div>
         <div className="item space-y-3 flex flex-col justify-center items-center ">
-<<<<<<< HEAD
           <Image width = {88} height={88} className="bg-slate-400 rounded-full p-2" src="/man.gif" alt="" />
-=======
           <Image width = {88} className="bg-slate-400 rounded-full p-2" src="/man.gif" alt="" />
->>>>>>> fdcacad1586c95916f8eee50dcccf4dc47fb3417
           <p className="font-bold text-center">Your Fans want to help</p>
           <p className="text-center">Your fans are available to help you</p>
         </div>
         <div className="item space-y-3 flex flex-col justify-center items-center ">
-<<<<<<< HEAD
           <Image width = {88} height={88} className="bg-slate-400 rounded-full p-2" src="/man.gif" alt="" />
-=======
           <Image width = {88} className="bg-slate-400 rounded-full p-2" src="/man.gif" alt="" />
->>>>>>> fdcacad1586c95916f8eee50dcccf4dc47fb3417
           <p className="font-bold text-center">Your Fans want to help</p>
           <p className="text-center">Your fans are available to help you</p>
         </div>
