@@ -7,7 +7,7 @@ export default function Home() {
     <>
    
     <div className="flex justify-center items-center flex-col text-white h-[44vh] px-5 text-xs md:text-base">
-      <div className="font-bold text-5xl md:text-5xl">Buy Me a Chai <span><img className="invertImg" src="" alt="" /></span></div>
+      <div className="font-bold text-5xl md:text-5xl">Buy Me a Chai <span><Image className="invertImg" src="" alt="" /></span></div>
       <p className="text-center md:text-left">
         A crowd funding platform for creators .Get funded by your followers and fans
       </p>
