@@ -14,7 +14,7 @@ const nextConfig = {
         },
         {
           // matching the OAuth callback URL specifically
-          source: "/api/auth/callback/github",
+          source: "/auth/callback/github",
           headers: [
             { key: "Access-Control-Allow-Credentials", value: "true" },
             { key: "Access-Control-Allow-Origin", value: "*" },
