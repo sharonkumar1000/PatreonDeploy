@@ -104,7 +104,7 @@ const Dashboard = () => {
     if (!session) {
       router.push("/login");
     }
-  }, [session, router]);
+  }, [session, router,getData]);
 
   // const getData = async () => {
   //   let u = await fetchuser(session.user.name);
