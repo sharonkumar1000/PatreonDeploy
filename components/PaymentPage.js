@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from "react-toastify";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 const PaymentPage = ({ username }) => {
@@ -19,8 +20,14 @@ const PaymentPage = ({ username }) => {
   const router = useRouter()
 
   useEffect(()=>{
+    const getData = async ()=>{
+      let u = await fetchuser(username)
+      setCurrentUser(u)
+      let dbpayments = await fetchpayments(username)
+      setPayments(dbpayments)
+  }
     getData()
-  },[])
+  },[username])
 
   useEffect(() => {
     console.log("Updated payments:", payments);
@@ -41,18 +48,13 @@ const PaymentPage = ({ username }) => {
         });
       }
       router.push(`/${username}`)
-  }, [])
+  }, [searchParams, router, username])
   
 
   const handleChange = (e) => {
     setPaymentform({ ...paymentform, [e.target.name]: e.target.value });
   };
-  const getData = async ()=>{
-      let u = await fetchuser(username)
-      setCurrentUser(u)
-      let dbpayments = await fetchpayments(username)
-      setPayments(dbpayments)
-  }
+ 
   const pay = async (amount) => {
     console.log("btn was clicked");
     //get the order id
@@ -104,13 +106,14 @@ const PaymentPage = ({ username }) => {
       <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
 
       <div className="cover w-full bg-red-50 relative">
-        <img
+        <Image
           className="object-cover w-full h-48 md:h-[350] "
-          src={currentUser.coverpic}
-          alt=""
+          src={currentUser.coverpic} 
+          width={500} height={200}
+          alt="no image"
         />
         <div className="overflow-hidden object-cover absolute -bottom-20 right-[38%] md:right-[45%] border-white border-2 rounded-full size-36">
-          <img
+          <Image
             className="rounded-full size-36"
             width={128}
             height={128}
@@ -134,10 +137,10 @@ const PaymentPage = ({ username }) => {
               {payments.map((p,i)=>{
                 return( 
               <li key = {i} className="my-4 flex gap-2 items-center">
-                <img src="profile.svg" alt="" />
+                <Image width={80} height={80} src="profile.svg" alt="" />
                 <span>
                   {p.name} donated <span className="font-bold"> ₹{p.amount}</span> with a
-                  message "{p.message}"
+                  message &quot;{p.message}&quot;
                 </span>
               </li>
               )})}
