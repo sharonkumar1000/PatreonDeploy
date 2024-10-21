@@ -29,9 +29,7 @@ const PaymentPage = ({ username }) => {
     getData()
   },[username])
 
-  useEffect(() => {
-    console.log("Updated payments:", payments);
-  }, [payments]); 
+ 
 
   useEffect(() => {
     if(searchParams.get("payment") == "true"){
@@ -56,7 +54,7 @@ const PaymentPage = ({ username }) => {
   };
  
   const pay = async (amount) => {
-    console.log("btn was clicked");
+
     //get the order id
     let a = await initiate(amount, username, paymentform);
     let orderId = a.id;
